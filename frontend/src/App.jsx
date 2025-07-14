@@ -29,26 +29,26 @@ function App() {
   };
 
   return (
-    <div className="p-8 max-w-xl mx-auto text-center">
+    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-4">
       <h1 className="text-2xl font-bold mb-4">Card Distributor</h1>
       <input
         type="number"
-        className="border p-2 rounded mr-2"
-        placeholder="Number of people"
         value={people}
-        onChange={(e) => setPeople(e.target.value)}
+        onChange={e => setPeople(e.target.value)}
+        className="p-2 border rounded mb-2 w-64"
+        placeholder="Enter number of people"
       />
       <button
         onClick={handleDistribute}
-        className="bg-blue-500 text-white px-4 py-2 rounded"
+        className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
       >
-        Distribute
+        Distribute Cards
       </button>
-      {error && <p className="text-red-500 mt-4">{error}</p>}
+      {error && <div className="mt-4 text-red-600">{error}</div>}
       {result && (
-        <pre className="text-left bg-gray-100 mt-4 p-4 rounded">
+        <div className="mt-4 whitespace-pre font-mono bg-white p-4 rounded shadow">
           {result}
-        </pre>
+        </div>
       )}
     </div>
   );
