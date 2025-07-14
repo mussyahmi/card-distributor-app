@@ -1,0 +1,26 @@
+# Node modules (frontend)
+frontend/node_modules
+frontend/dist
+
+# Environment files
+*.env
+*.env.local
+*.env.production
+*.env.development
+
+# Log files
+*.log
+
+# OS / IDE / editor files
+.DS_Store
+Thumbs.db
+.vscode
+.idea
+
+# Docker artifacts
+Dockerfile
+docker-compose.yml
+
+# Git
+.git
+.gitignore
