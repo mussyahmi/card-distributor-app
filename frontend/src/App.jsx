@@ -11,7 +11,7 @@ function App() {
     setResult("");
 
     if (!people || isNaN(people) || parseInt(people) <= 0) {
-      setError("Invalid input value.");
+      setError("Input value does not exist or value is invalid.");
       return;
     }
 
